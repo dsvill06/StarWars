@@ -7,7 +7,7 @@ function Card(props) {
         <div class="card-body">
             <h5 class="card-title">Character</h5>
             <p class="card-text">Name: {props.name}</p>
-            <button type="button" class="btn btn-primary">Button</button>
+            <a href="/about"><button type="button" class="btn btn-primary">Information</button></a>
         </div>
       </div>
     </div>

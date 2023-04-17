@@ -2,8 +2,6 @@ import React,{useState,useEffect} from 'react'
 import "./home.css"
 import Card from "./components/Card.js"
 
-
-
 function Home() {
     // This would be used to load up an images based on the name passed by the data map holding the cards.
 //    const link = "./assets/pxfuel.jpg";

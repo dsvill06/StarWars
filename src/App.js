@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import React, {useState, useEffect} from 'react';
-import Home from "./Home.js"
+import React, {Component} from 'react';
+import {BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { ReactDOM } from 'react';
+import Home from './Home.js'
 import {Navigation} from "./Navigation.js"
-import './App.css';
+import Information from "./Information.js"
 
-
-
-function App() {
+export default function App() {
   return (
-
-    <div className='bg-dark'>
+    <div className="App">
       <Navigation/>
-      <Home/>
-      {/* <div className='text-center'>
-        {data ? <p>Name: {data.name}</p> : 'Loading...'}
-      </div>
-      <div className='text-center'>
-        {data ? <pre>{JSON.stringify(data, null, 1)}</pre> : 'Loading...'}
-      </div> */}
+      <Router>
+        <Routes>
+          <Route exact path='/home' element={<Home/>}/>
+          <Route path='/about' state={{ from: "home" }} element={<Information/>} />
+        </Routes>
+      </Router>
+      
     </div>
   );
 }
-
-export default App;
